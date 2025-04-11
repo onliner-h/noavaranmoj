@@ -1,11 +1,160 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>صفحه من</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موج نو آوران</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #002f6c;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #00aaff;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.3em;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            max-width: 1200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        .highlight {
+            color: #00aaff;
+            font-weight: bold;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        footer {
+            background-color: #002f6c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .service-card {
+            background-color: #e8f5fe;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            background-color: #d1eaff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .container > div {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .container > div {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<body style="text-align:center; font-family:sans-serif; margin-top: 100px;">
-  <h1>سلام! 👋</h1>
-  <p>خوش اومدی به صفحه من!</p>
+<body>
+
+    <header>
+        <h1>شرکت موج نو آوران</h1>
+        <p>تعمیرات تخصصی لوازم الکترونیکی و کامپیوتر</p>
+    </header>
+
+    <section>
+        <h2>درباره شرکت</h2>
+        <p class="content">
+            شرکت <span class="highlight">موج نو آوران</span> با تجربه‌ای بیش از یک دهه در زمینه تعمیرات تخصصی لوازم الکترونیکی،
+            لپ‌تاپ و کامپیوتر، به یکی از برندهای معتبر در این صنعت تبدیل شده است. هدف ما ارائه خدمات با کیفیت، سریع و مقرون به
+            صرفه است. با تیمی مجرب و تجهیزاتی پیشرفته، مشکلات فنی دستگاه‌های شما را با دقت و دلسوزی حل می‌کنیم.
+        </p>
+
+        <h2>خدمات ما</h2>
+        <div class="container">
+            <div class="service-card">
+                <h3>تعمیر لپ‌تاپ</h3>
+                <p class="content">
+                    ما تعمیرات تخصصی لپ‌تاپ‌ها از برندهای مختلف را با بهترین کیفیت و در کوتاه‌ترین زمان انجام می‌دهیم. از تعمیرات سخت‌افزاری تا مشکلات نرم‌افزاری، خدمات جامع در اختیار شما قرار می‌دهیم.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>تعمیر کامپیوتر</h3>
+                <p class="content">
+                    خدمات تعمیرات کامپیوتر شامل تعمیرات سخت‌افزاری، ارتقاء سیستم و رفع مشکلات نرم‌افزاری است. ما به تمامی نیازهای شما در این زمینه پاسخ خواهیم داد.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>تعمیر موبایل</h3>
+                <p class="content">
+                    اگر گوشی شما دچار مشکل شده است، ما می‌توانیم آن را سریع و با کیفیت تعمیر کنیم. از تعمیر صفحه نمایش تا رفع مشکلات نرم‌افزاری، تیم ما آماده است.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>فروش قطعات الکترونیکی</h3>
+                <p class="content">
+                    قطعات الکترونیکی با کیفیت بالا برای تعمیرات و ارتقاء دستگاه‌های شما در دسترس است. تمامی قطعات ما از برندهای معتبر تأمین می‌شوند.
+                </p>
+            </div>
+        </div>
+
+        <h2>چرا ما؟</h2>
+        <p class="content">
+            در <span class="highlight">موج نو آوران</span>، ما به کیفیت کار اهمیت زیادی می‌دهیم. با استفاده از ابزارهای پیشرفته و تیمی مجرب، هرگونه مشکل فنی دستگاه‌های شما را به بهترین شکل ممکن حل می‌کنیم. از تعمیرات سریع و دقیق تا مشاوره‌های تخصصی، ما همیشه در کنار شما خواهیم بود.
+        </p>
+    </section>
+
+    <footer>
+        <p>تماس با ما: <a href="mailto:info@noavaranmoj.com">info@noavaranmoj.com</a> | تلفن: 021-12345678</p>
+        <p>تمامی حقوق محفوظ است © 2025 | <a href="https://github.com/onliner-h/noavaranmoj">صفحه گیت‌هاب</a></p>
+    </footer>
+
 </body>
 </html>
