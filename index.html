@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
@@ -14,25 +14,31 @@
             background-color: #f3f3f3;
         }
         header {
-            background-image: url('header.jpeg');
+            position: relative;
+            background-image: url('my-header.jpeg');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 100px 20px;
             border-bottom: 5px solid #00aaff;
+            overflow: hidden;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            letter-spacing: 3px;
-            font-weight: bold;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* تیرگی ۵۰٪ */
+            z-index: 1;
         }
+
+        header h1,
         header p {
-            font-size: 1.5em;
-            margin: 10px 0;
-            font-weight: 300;
+            position: relative;
+            z-index: 2;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
         section {
