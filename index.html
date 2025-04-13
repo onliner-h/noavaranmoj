@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
@@ -131,9 +131,56 @@
             padding-left: 20px;
         }
         @media (max-width: 768px) {
+            header {
+                padding: 60px 15px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .hero-image {
+                height: 200px;
+                object-fit: cover;
+            }
+
+            section {
+                padding: 30px 15px;
+                margin: 10px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                font-size: 1em;
+            }
+
+            .service-title {
+                font-size: 1.4em;
+            }
+
+            .service-description {
+                font-size: 1em;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
             .container > div {
                 width: 100%;
-                margin-left: 0;
+                margin-left: 0 !important;
+            }
+
+            footer p {
+                font-size: 0.95em;
             }
         }
     </style>
