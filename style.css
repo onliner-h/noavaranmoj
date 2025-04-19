@@ -9,3 +9,23 @@
 body {
   font-family: 'Vazir', sans-serif;
 }
+/* استایل برای صفحه‌نمایش‌های بزرگتر از 768px (مثلاً تبلت‌ها و لپ‌تاپ‌ها) */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* استایل برای صفحه‌نمایش‌های کوچکتر از 768px (مثلاً گوشی‌های موبایل) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* استایل برای صفحه‌نمایش‌های کوچکتر از 480px (گوشی‌های خیلی کوچک) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
