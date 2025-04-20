@@ -35,6 +35,15 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.service-image {
+    width: 100%;             /* عرض تصویر تا حد کارت */
+    height: 150px;           /* ارتفاع ثابت برای همه تصاویر */
+    object-fit: cover;       /* تصویر رو طوری برش می‌ده که بدون کشیدگی کامل جا بگیره */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .service-card {
   background: #f9fbe7;
   flex: 1 1 calc(33% - 20px);
