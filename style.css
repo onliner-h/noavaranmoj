@@ -1,38 +1,157 @@
+/* فونت وزیر */
 @font-face {
-  font-family: 'Vazir';
-  src: url('fonts/Vazir.woff2') format('woff2'),
-       url('fonts/Vazir.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Vazirmatn';
+  src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
 }
 
 body {
-  font-family: 'Vazir', sans-serif;
-  font-size: 1rem;
+  font-family: 'Vazirmatn', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #fdfcfa, #f0f0f0);
-  color: #333;
+  background: linear-gradient(to bottom, #f3f4f6, #e0e0e0);
+  color: #37474F;
+  direction: rtl;
 }
+
 .container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* استایل برای صفحه‌نمایش‌های کوچکتر از 768px (مثلاً گوشی‌های موبایل) */
-@media (max-width: 767px) {
-    body {
-        font-size: 14px;
-    }
+.hero-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* استایل برای صفحه‌نمایش‌های کوچکتر از 480px (گوشی‌های خیلی کوچک) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
+.service-card {
+  background: #f9fbe7;
+  flex: 1 1 calc(33% - 20px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  background: #e6ee9c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  color: #1A237E;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.service-description {
+  font-size: 1em;
+  color: #555;
+  margin: 0;
+}
+
+footer {
+  background: #1B5E20;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #A5D6A7;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.cta-button {
+  background-color: #00C853;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #00b74a;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #1A237E;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 999;
+}
+
+.sticky-header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.sticky-header a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .service-card {
+    flex: 1 1 100%;
+  }
+  .sticky-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
