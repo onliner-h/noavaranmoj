@@ -1,312 +1,192 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شرکت نوآوران موج 
-    (دانش بنیان)</title>
+    <title>شرکت نوآوران موج (دانش بنیان)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap">
     <style>
         body {
-            font-family: 'Vazir', sans-serif;
-            direction: rtl;
+            font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f3f3;
+            background: linear-gradient(to bottom, #f3f3f3, #e0e0e0);
+            color: #333;
+            direction: rtl;
         }
         header {
-            position: relative;
-            background-image: url('header.jpg');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('header.jpg') no-repeat center/cover;
             color: white;
+            padding: 120px 20px;
             text-align: center;
-            padding: 100px 20px;
-            border-bottom: 5px solid #8BC34A;
-            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.2); /* تیرگی .2٪ */
-            z-index: 1;
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
         }
-
-        header h1,
-        header p {
-            position: relative;
-            z-index: 2;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        header h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #cfd8dc;
         }
         section {
-            padding: 50px;
-            margin: 20px auto;
             background-color: white;
-            border-radius: 10px;
-            max-width: 1200px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            padding: 40px;
+            max-width: 1100px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         section h2 {
-            font-size: 2.5em;
-            color: #33691E;
-            margin-bottom: 15px;
-            font-weight: 600;
+            color: #0D47A1;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         .content {
-            font-size: 1.2em;
-            line-height: 1.8;
-            color: #555;
+            line-height: 2;
+            font-size: 1.1em;
         }
         .highlight {
-            color: #689F38;
+            color: #00796B;
             font-weight: bold;
-        }
-        ul {
-            padding-left: 20px;
-            list-style-type: disc;
-        }
-        .service-card {
-            background-color: #f1f8e9;
-            border-radius: 10px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        .service-card:hover {
-            background-color: #dcedc8;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            gap: 20px;
         }
-        .container > div {
-            width: 48%;
+        .service-card {
+            background: #f9fbe7;
+            flex: 1 1 calc(33% - 20px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: #e6ee9c;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .service-title {
+            color: #33691E;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .service-description {
+            font-size: 1em;
+            color: #555;
+        }
+        .hero-image {
+            width: 100%;
+            border-radius: 12px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .container > div:nth-child(odd) {
-            margin-left: 4%;
+        iframe {
+            width: 100%;
+            border-radius: 12px;
         }
         footer {
-            background-color: #33691E;
+            background: #1B5E20;
             color: white;
-            padding: 20px;
             text-align: center;
-            margin-top: 30px;
-        }
-        footer p {
-            font-size: 1.1em;
-            margin: 5px 0;
+            padding: 20px;
         }
         footer a {
-            color: #689F38;
+            color: #A5D6A7;
             text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
         }
-        .hero-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        .service-title {
-            font-size: 1.8em;
-            color: #33691E;
-            margin-bottom: 15px;
-        }
-        .service-description {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .service-list {
-            list-style-type: square;
-            padding-left: 20px;
-        }
         @media (max-width: 768px) {
-            header {
-                padding: 60px 15px;
-            }
-
-            header h1 {
-                font-size: 5vw;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            .hero-image {
-                height: 200px;
-                object-fit: cover;
-            }
-
-            section {
-                padding: 30px 15px;
-                margin: 10px;
-            }
-
-            section h2 {
-                font-size: 1.8em;
-            }
-
-            .content {
-                font-size: 1em;
-            }
-
-            .service-title {
-                font-size: 1.4em;
-            }
-
-            .service-description {
-                font-size: 1em;
-            }
-
             .container {
                 flex-direction: column;
-                align-items: stretch;
             }
-
-            .container > div {
-                width: 100%;
-                margin-left: 0 !important;
-            }
-
-            footer p {
-                font-size: 0.95em;
+            .service-card {
+                flex: 1 1 100%;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-         <h1 style="font-family: 'Vazir', sans-serif;">
-         شرکت نوآوران موج  <span style="font-size: 0.6em;">(دانش‌بنیان)</span>
-         </h1>
-         <h2 style="position: relative; z-index: 2; font-family: 'Vazir', sans-serif; font-size: 1.1em; margin-top: 8px; text-shadow: 1px 1px 4px rgba(0,0,0,0.4);">
-         مرکز خدمات پس از فروش
-  	 </h2>
-   	 <p style="margin-top: 60px;">تعمیرات تخصصی تجهیزات دیجیتال، الکترونیکی<br>و ماشین آلات اداری</p>
-    </header>
+<header>
+    <h1>شرکت نوآوران موج <span style="font-size: 0.6em;">(دانش‌بنیان)</span></h1>
+    <h2>مرکز خدمات پس از فروش</h2>
+    <p style="margin-top: 20px;">تعمیرات تخصصی تجهیزات دیجیتال، الکترونیکی و ماشین آلات اداری</p>
+</header>
 
+<section>
+    <h2>نمای کلی شرکت</h2>
+    <img src="1.jpg" alt="نمای کلی شرکت" class="hero-image">
+    <img src="2.jpg" alt="نمای کلی شرکت" class="hero-image">
 
-    <section>
-	<h2>نمای کلی شرکت</h2>
-        <img src="1.jpg" alt="نمای کلی شرکت" class="hero-image">
-	<img src="2.jpg" alt="نمای کلی شرکت" class="hero-image">
+    <h2>درباره شرکت</h2>
+    <p class="content">
+        شرکت <span class="highlight">موج نوآوران</span> با بیش از یک دهه تجربه در تعمیرات تخصصی لوازم الکترونیکی، لپ‌تاپ و کامپیوتر، خدمات سریع، دقیق و مقرون‌به‌صرفه ارائه می‌دهد.
+    </p>
 
-        <h2>درباره شرکت</h2>
-        <p class="content">
-            شرکت <span class="highlight">موج نو آوران</span> با تجربه‌ای بیش از یک دهه در زمینه تعمیرات تخصصی لوازم الکترونیکی،
-            لپ‌تاپ و کامپیوتر، به یکی از برندهای معتبر در این صنعت تبدیل شده است. هدف ما ارائه خدمات با کیفیت، سریع و مقرون به
-            صرفه است. با تیمی مجرب و تجهیزاتی پیشرفته، مشکلات فنی دستگاه‌های شما را با دقت و دلسوزی حل می‌کنیم.
-        </p>
-
-        <h2>خدمات ما</h2>
+    <h2>خدمات ما</h2>
     <div class="container">
         <div class="service-card">
-            <h3 class="service-title">تعمیرات لپ‌تاپ</h3>
-            <p class="service-description">
-                ما تعمیرات تخصصی لپ‌تاپ‌ها از برندهای مختلف را با بهترین کیفیت و در کوتاه‌ترین زمان انجام می‌دهیم. از تعمیرات سخت‌افزاری تا مشکلات نرم‌افزاری، خدمات جامع در اختیار شما قرار می‌دهیم.
-            </p>
+            <h3 class="service-title"><i class="fas fa-laptop-code"></i> تعمیرات لپ‌تاپ</h3>
+            <p class="service-description">تعمیر تخصصی انواع لپ‌تاپ، سخت‌افزار و نرم‌افزار.</p>
         </div>
         <div class="service-card">
-            <h3 class="service-title">تعمیرات کامپیوتر</h3>
-            <p class="service-description">
-                خدمات تعمیرات کامپیوتر شامل تعمیرات سخت‌افزاری، ارتقاء سیستم و رفع مشکلات نرم‌افزاری است. ما به تمامی نیازهای شما در این زمینه پاسخ خواهیم داد.
-            </p>
+            <h3 class="service-title"><i class="fas fa-desktop"></i> تعمیرات کامپیوتر</h3>
+            <p class="service-description">خدمات کامل برای انواع کیس و سیستم‌های شخصی.</p>
         </div>
         <div class="service-card">
-            <h3 class="service-title">تعمیرات دوربین عکاسی</h3>
-            <p class="service-description">
-                تعمیرات تخصصی دوربین‌های عکاسی با استفاده از تجهیزات پیشرفته و تیم فنی مجرب. از تعمیر لنز تا رفع مشکلات سخت‌افزاری، تیم ما آماده است تا مشکلات دوربین شما را حل کند.
-            </p>
+            <h3 class="service-title"><i class="fas fa-camera"></i> تعمیرات دوربین عکاسی</h3>
+            <p class="service-description">رفع ایرادات فنی انواع دوربین با ابزارهای پیشرفته.</p>
         </div>
         <div class="service-card">
-            <h3 class="service-title">تعمیرات دوربین فیلم‌برداری</h3>
-            <p class="service-description">
-                خدمات تعمیر دوربین‌های فیلم‌برداری حرفه‌ای و غیرحرفه‌ای با دقت بالا. مشکلات مربوط به ضبط، لنز، پردازش تصویر و موارد دیگر به بهترین نحو رفع می‌شود.
-            </p>
+            <h3 class="service-title"><i class="fas fa-video"></i> تعمیرات دوربین فیلم‌برداری</h3>
+            <p class="service-description">خدمات فنی برای انواع دوربین‌های فیلم‌برداری حرفه‌ای.</p>
         </div>
         <div class="service-card">
-            <h3 class="service-title">تعمیرات تجهیزات زیرساخت شبکه</h3>
-            <p class="service-description">
-                ما مشکلات شبکه شما را به طور تخصصی و سریع رفع می‌کنیم. از تعمیرات سوییچ‌ها و روترها تا بهینه‌سازی شبکه، خدمات گسترده‌ای را ارائه می‌دهیم.
-            </p>
+            <h3 class="service-title"><i class="fas fa-network-wired"></i> تعمیرات شبکه</h3>
+            <p class="service-description">سرویس تخصصی تجهیزات زیرساختی شبکه و مخابراتی.</p>
         </div>
         <div class="service-card">
-            <h3 class="service-title">تعمیرات موبایل</h3>
-            <p class="service-description">
-                اگر گوشی شما دچار مشکل شده است، ما می‌توانیم آن را سریع و با کیفیت تعمیر کنیم. از تعمیر صفحه نمایش تا رفع مشکلات نرم‌افزاری، تیم ما آماده است.
-            </p>
-        </div>
-        <!-- اضافه کردن خدمات جدید -->
-        <div class="service-card">
-            <h3 class="service-title">تعمیرات تجهیزات رادیویی</h3>
-            <p class="service-description">
-                ما تخصص در تعمیر و نگهداری تجهیزات رادیویی از جمله فرستنده‌ها، گیرنده‌ها و دیگر دستگاه‌های رادیویی داریم. تیم فنی ما با استفاده از فناوری‌های پیشرفته به رفع مشکلات و بهینه‌سازی عملکرد این تجهیزات می‌پردازد.
-            </p>
-        </div>
-        <div class="service-card">
-            <h3 class="service-title">تعمیرات لوازم الکترونیکی</h3>
-            <p class="service-description">
-                تمامی مشکلات لوازم الکترونیکی شما اعم از تلویزیون، مایکروویو، یخچال، و لوازم خانگی دیگر با بهترین کیفیت تعمیر می‌شوند. ما به تعمیر تمامی برندها و مدل‌های مختلف با استفاده از قطعات اورجینال می‌پردازیم.
-            </p>
-        </div>
-        <div class="service-card">
-            <h3 class="service-title">تعمیرات ماشین‌آلات اداری</h3>
-            <p class="service-description">
-                ما به تعمیرات تخصصی ماشین‌آلات اداری از جمله پرینترها، فکس‌ها، و کپی‌ها می‌پردازیم. تیم فنی ما با بررسی دقیق و شناسایی سریع مشکلات، ماشین‌آلات شما را به بهترین نحو تعمیر و به حالت کارکرد اولیه برمی‌گرداند.
-            </p>
+            <h3 class="service-title"><i class="fas fa-mobile-alt"></i> تعمیرات موبایل</h3>
+            <p class="service-description">تعمیر سریع و دقیق گوشی‌های هوشمند.</p>
         </div>
     </div>
 
-        <h2>چرا ما؟</h2>
-        <p class="content">
-            در <span class="highlight">نوآوران موج</span>، ما به کیفیت کار اهمیت زیادی می‌دهیم. با استفاده از ابزارهای پیشرفته و تیمی مجرب، هرگونه مشکل فنی دستگاه‌های شما را به بهترین شکل ممکن حل می‌کنیم. از تعمیرات سریع و دقیق تا مشاوره‌های تخصصی، ما همیشه در کنار شما خواهیم بود.
-        </p>
-    </section>
+    <h2>چرا ما؟</h2>
+    <p class="content">
+        در <span class="highlight">نوآوران موج</span> کیفیت، دقت و پشتیبانی اولویت ماست. با تکنولوژی روز، بهینه‌ترین راه‌حل‌ها را برای مشکلات فنی ارائه می‌دهیم.
+    </p>
+</section>
 
-<div style="max-width: 600px; margin: 20px auto; text-align: center;">
-  <!-- پیش‌نمایش نقشه -->
-  <iframe
-    src="https://www.google.com/maps?q=35.73968961658236,51.452500595158774&hl=fa&z=16&output=embed"
-    width="100%"
-    height="300"
-    style="border:0; border-radius: 12px;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
+<section style="max-width: 800px; margin: auto; text-align: center;">
+    <iframe
+        src="https://www.google.com/maps?q=35.73968961658236,51.452500595158774&hl=fa&z=16&output=embed"
+        height="300"
+        loading="lazy"
+        style="border:0;">
+    </iframe>
+    <a href="https://www.google.com/maps?q=35.73968961658236,51.452500595158774" target="_blank" style="
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1565C0;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;">
+        باز کردن در نقشه
+    </a>
+</section>
 
-  <!-- دکمه برای باز کردن در اپ نقشه -->
-  <a href="https://www.google.com/maps?q=35.73968961658236,51.452500595158774" target="_blank" style="
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #4285F4;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    ">
-    باز کردن در نقشه
-  </a>
-</div>
-	
-    <footer>
-        <a href="https://n-moj.ir" target="_blank">n-moj.ir</a> | تلفن: 74565000-021 داخلی های 310، 311، 312</p>
-        <p>تهران، بعد از پل سیدخندان، خیابان کابلی، خیابان حیامنش، پلاک 101</a></p>
-    </footer>
+<footer>
+    <p><a href="https://n-moj.ir" target="_blank">n-moj.ir</a> | تلفن: ۰۲۱-۷۴۵۶۵۰۰۰ داخلی ۳۱۰، ۳۱۱، ۳۱۲</p>
+    <p>تهران، پل سیدخندان، خیابان کابلی، خیابان حیامنش، پلاک ۱۰۱</p>
+</footer>
 
 </body>
 </html>
