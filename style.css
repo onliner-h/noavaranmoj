@@ -8,12 +8,19 @@
 
 body {
   font-family: 'Vazir', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #fdfcfa, #f0f0f0);
+  color: #333;
 }
-/* استایل برای صفحه‌نمایش‌های بزرگتر از 768px (مثلاً تبلت‌ها و لپ‌تاپ‌ها) */
-@media (min-width: 768px) {
-    body {
-        font-size: 16px;
-    }
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 /* استایل برای صفحه‌نمایش‌های کوچکتر از 768px (مثلاً گوشی‌های موبایل) */
