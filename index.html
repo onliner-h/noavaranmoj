@@ -123,10 +123,9 @@
 </header>
 
 <section>
-    <div class="slider">
-       <img src="1.jpg" class="slide active" alt="نمای 1 شرکت">
-       <img src="2.jpg" class="slide" alt="نمای 2 شرکت">
-    </div>
+    <h2>نمای کلی شرکت</h2>
+    <img src="1.jpg" alt="نمای کلی شرکت" class="hero-image" loading="lazy">
+    <img src="2.jpg" alt="نمای کلی شرکت" class="hero-image" loading="lazy">
 
     <h2>درباره شرکت</h2>
     <p class="content">
@@ -211,21 +210,6 @@
     <p><a href="https://n-moj.ir" target="_blank">n-moj.ir</a> | تلفن: ۰۲۱-۷۴۵۶۵۰۰۰ داخلی ۳۱۰، ۳۱۱، ۳۱۲</p>
     <p>تهران، پل سیدخندان، خیابان کابلی، خیابان حیامنش، پلاک ۱۰۱</p>
 </footer>
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
-    }
-
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }, 4000); // هر ۴ ثانیه
-</script>
 
 </body>
 </html>
