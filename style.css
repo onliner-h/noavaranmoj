@@ -9,6 +9,24 @@
   src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700;
 }
+header {
+    position: relative;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    height: 100vh; /* ارتفاع هدر به اندازه صفحه */
+    overflow: hidden; /* جلوگیری از نمایش ذرات خارج از هدر */
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* ذرات در پس‌زمینه */
+}
 
 body {
   font-family: 'Vazirmatn', sans-serif;
