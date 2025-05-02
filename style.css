@@ -9,6 +9,17 @@
   src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700;
 }
+.slideshow-container {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.slide {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
 
 header {
     position: relative;
