@@ -9,6 +9,26 @@
   src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700;
 }
+.slider {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
 header {
     position: relative;
     color: white;
