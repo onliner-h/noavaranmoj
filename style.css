@@ -35,13 +35,44 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 🔄 اسلایدشو خودکار چپ به راست */
+.image-slider {
+  overflow: hidden;
+  width: 100%;
+  height: 200px; /* ارتفاع دلخواه */
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: slide-left 20s linear infinite;
+}
+
+.slider-track img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+@keyframes slide-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* سایر استایل‌ها */
 .service-image {
-    width: 100%;             /* عرض تصویر تا حد کارت */
-    height: 150px;           /* ارتفاع ثابت برای همه تصاویر */
-    object-fit: cover;       /* تصویر رو طوری برش می‌ده که بدون کشیدگی کامل جا بگیره */
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .service-card {
@@ -55,6 +86,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
 .service-card:hover {
   transform: translateY(-5px);
   background: #e6ee9c;
@@ -71,17 +103,17 @@ body {
 }
 
 .service-description {
-    transition: all 0.3s ease;
-    opacity: 1;
-    max-height: 200px;
-    overflow: hidden;
-    margin-top: 10px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  max-height: 200px;
+  overflow: hidden;
+  margin-top: 10px;
 }
 
 .hidden {
-    opacity: 0;
-    max-height: 0;
-    margin-top: 0;
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
 }
 
 footer {
